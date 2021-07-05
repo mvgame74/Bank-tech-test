@@ -2,6 +2,7 @@ class BankAccount{
 
   constructor(balance) {
     this.balance = 0.00;
+    this.bankMovement = [];
   }
 
   getCurrentBalance() {

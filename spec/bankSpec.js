@@ -25,4 +25,8 @@ describe('BankAccount', () => {
     expect(myAccount.getCurrentBalance()).toEqual(-500.00);
   });
 
-})
+  it('Each account is created with an empty array for bankMovements', () => {
+    expect(myAccount.bankMovement).toEqual([]);
+  })
+
+});
