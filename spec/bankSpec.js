@@ -3,13 +3,15 @@
 describe('BankAccount', () => {
   let myAccount;
 
-  it('starts with a zero balance', () => {
+  beforeEach(() => {
     myAccount = new BankAccount();
+  });
+
+  it('starts with a zero balance', () => {
     expect(myAccount.balance).toEqual(0);
   });
 
   it('gives you the balance as we start', () => {
-    myAccount = new BankAccount();
     expect(myAccount.getCurrentBalance()).toEqual(0);
   });
 
