@@ -30,6 +30,11 @@ describe('BankAccount', () => {
     expect(myAccount.getCurrentBalance()).toEqual(-500.00);
   });
 
+  it('adds the transaction when the cliant makes a withdrawal of an amount', () => {
+    myAccount.withdrawal(200.00);
+    expect(myAccount.bankMovement.length).toEqual(3);
+  });
+
   it('Each account is created with an empty array for bankMovements', () => {
     expect(myAccount.bankMovement).toEqual([]);
   })
