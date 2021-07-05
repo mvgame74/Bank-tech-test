@@ -4,4 +4,8 @@ class BankAccount{
     this.balance = 0;
   }
 
+  getCurrentBalance() {
+    return this.balance;
+  }
+
 }
