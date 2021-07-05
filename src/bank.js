@@ -11,6 +11,7 @@ class BankAccount{
 
   deposit(amount) {
     this.balance += amount;
+    this.bankMovement.push('credit', amount, this.balance);
   }
 
   withdrawal(amount) {
