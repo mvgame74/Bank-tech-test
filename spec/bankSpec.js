@@ -20,5 +20,9 @@ describe('BankAccount', () => {
     expect(myAccount.getCurrentBalance()).toEqual(1000.00);
   });
 
+  it('decreases the balance when the client makes a withdrawal of an amount', () => {
+    myAccount.withdrawal(500.00);
+    expect(myAccount.getCurrentBalance()).toEqual(-500.00);
+  });
 
 })
