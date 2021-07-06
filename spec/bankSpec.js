@@ -22,7 +22,7 @@ describe('BankAccount', () => {
 
   it('adds the transaction when the cliant makes a deposit of an amount', () => {
     myAccount.deposit(1000.00);
-    expect(myAccount.bankMovement.length).toEqual(3);
+    expect(myAccount.bankMovement.length).toEqual(1);
   });
 
   it('decreases the balance when the client makes a withdrawal of an amount', () => {
@@ -32,11 +32,17 @@ describe('BankAccount', () => {
 
   it('adds the transaction when the cliant makes a withdrawal of an amount', () => {
     myAccount.withdrawal(200.00);
-    expect(myAccount.bankMovement.length).toEqual(3);
+    expect(myAccount.bankMovement.length).toEqual(1);
   });
 
-  it('Each account is created with an empty array for bankMovements', () => {
+  it('any account is created with an empty array for bankMovements', () => {
     expect(myAccount.bankMovement).toEqual([]);
-  })
+  });
+
+  it('Date is not null in each transaction and is 10 characters long', function() {
+    myAccount.deposit(100.00);
+    expect(myAccount.bankMovement[0].date.length).toEqual(10);
+  });
+
 
 });

@@ -11,12 +11,20 @@ class BankAccount{
 
   deposit(amount) {
     this.balance += amount;
-    this.bankMovement.push('credit', amount, this.balance);
+    this.bankMovement.push({
+      date: createDate(),
+      credit: amount,
+      debit: null,
+      balance: this.balance });
   }
 
   withdrawal(amount) {
     this.balance -= amount;
-    this.bankMovement.push('debit', amount, this.balance);
+    this.bankMovement.push({
+      date: createDate(),
+      credit: null,
+      debit: amount,
+      balance: this.balance });
   }
 
 }
