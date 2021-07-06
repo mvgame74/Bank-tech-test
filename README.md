@@ -68,8 +68,8 @@ Follow these instructions to run the program:
 5. Print a statement
 ````
 > date || credit || debit || balance
-06/07/2021 || 1000 ||   || 1000
-06/07/2021 ||   || 500 || 500
+06/07/2021 || 1000 ||  || 1000
+06/07/2021 ||  || 500 || 500
 <= undefined
 ````
 
