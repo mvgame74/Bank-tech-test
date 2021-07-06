@@ -36,77 +36,73 @@ date || credit || debit || balance
 
 Once you have completed the challenge and feel happy with your solution, here's a form to help you reflect on the quality of your code: https://docs.google.com/forms/d/1Q-NnqVObbGLDHxlvbUfeAC7yBCf3eCjTmz6GOqC9Aeo/edit
 
-# Project name
-
-<!--- These are examples. See https://shields.io for others or to customize this set of shields. You might want to include dependencies, project status and licence info here --->
-![GitHub repo size](https://img.shields.io/github/repo-size/scottydocs/README-template.md)
-![GitHub contributors](https://img.shields.io/github/contributors/scottydocs/README-template.md)
-![GitHub stars](https://img.shields.io/github/stars/scottydocs/README-template.md?style=social)
-![GitHub forks](https://img.shields.io/github/forks/scottydocs/README-template.md?style=social)
-![Twitter Follow](https://img.shields.io/twitter/follow/scottydocs?style=social)
-
-Project name is a `<utility/tool/feature>` that allows `<insert_target_audience>` to do `<action/task_it_does>`.
-
-Additional line of information text about what the project does. Your introduction should be around 2 or 3 sentences. Don't go overboard, people won't read it.
-
 ## Prerequisites
+````
+git clone https://github.com/mvgame74/Bank-tech-test
+````
+## Running tests
 
-Before you begin, ensure you have met the following requirements:
-<!--- These are just example requirements. Add, duplicate or remove as required --->
-* You have installed the latest version of `<coding_language/dependency/requirement_1>`
-* You have a `<Windows/Linux/Mac>` machine. State which OS is supported/which is not.
-* You have read `<guide/link/documentation_related_to_project>`.
+````
+open SpecRunner.html
+````
 
-## Installing <project_name>
+## Usage
+Using Chrome on a Mac, hold down Cmd + Alt + J to open the console.
 
-To install <project_name>, follow these steps:
+Follow these instructions to run the program:
 
-Linux and macOS:
+1. Run the program and create a bank account:
+````
+> myAccount = new BankAccount;
+<= BankAccount {balance: 0, bankMovement: Array(0)}
+````
+2. Deposit £1000
+````
+> myAccount.deposit(1000);
+<= undefined
+> myAccount.balance;
+<= 1000
+````
+3. Withdraw £5
+````
+> myAccount.withdraw(500);
+<= undefined
+> myAccount.balance;
+<= 500
+````
+4. Display the balance
+````
+> myAccount.balance;
+<= 500
+````
+5. Print a statement
+````
+> date || credit || debit || balance
+06/07/2021 || 1000 ||   || 1000
+06/07/2021 ||   || 500 || 500
+<= undefined
+````
+
+## User stories
 ```
-<install_command>
+As a client,
+So I can save money,
+I need to open a bank account.
+
+As a client,
+So I can check how much money I have saved,
+I need to have a bank balance.
+
+As a client,
+So I can have money in the bank account,
+I  need to deposit money into it.
+
+As a client,
+So I can spend money,
+I need to make withdrawals from my bank account.
+
+As a client,
+So I can check what my bank has recorded my movements correctlt,
+I need to see a printed bank statement.
+
 ```
-
-Windows:
-```
-<install_command>
-```
-## Using <project_name>
-
-To use <project_name>, follow these steps:
-
-```
-<usage_example>
-```
-
-Add run commands and examples you think users will find useful. Provide an options reference for bonus points!
-
-## Contributing to <project_name>
-<!--- If your README is long or you have some specific process or steps you want contributors to follow, consider creating a separate CONTRIBUTING.md file--->
-To contribute to <project_name>, follow these steps:
-
-1. Fork this repository.
-2. Create a branch: `git checkout -b <branch_name>`.
-3. Make your changes and commit them: `git commit -m '<commit_message>'`
-4. Push to the original branch: `git push origin <project_name>/<location>`
-5. Create the pull request.
-
-Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
-
-## Contributors
-
-Thanks to the following people who have contributed to this project:
-
-* [@scottydocs](https://github.com/scottydocs) 📖
-* [@cainwatson](https://github.com/cainwatson) 🐛
-* [@calchuchesta](https://github.com/calchuchesta) 🐛
-
-You might want to consider using something like the [All Contributors](https://github.com/all-contributors/all-contributors) specification and its [emoji key](https://allcontributors.org/docs/en/emoji-key).
-
-## Contact
-
-If you want to contact me you can reach me at <your_email@address.com>.
-
-## License
-<!--- If you're not sure which open license to use see https://choosealicense.com/--->
-
-This project uses the following license: [<license_name>](<link>).
