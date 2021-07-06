@@ -96,3 +96,14 @@ So I can check what my bank has recorded my movements correctlt,
 I need to see a printed bank statement.
 
 ```
+## Aproach
+
+I stated by writing the simplest test I could think of, first to create a bank account withzero balance, and then building up to make deposits and make withdrawals; after this, I started building up the bank movements, by creating the line with each action and pushing it into an array. This then progressed to be able to add a date to it, and modify the movement format. Finally, construccted the format for an output in console.log to be able to see all the movements together in a statement.
+
+## Structure
+
+The structureis divided in three main files:
+
+** bank.js ** contains the initialisation of the bank account, and the methods for deposits, withdrawals and printing bank statements. 
+** bankSpec.js ** contains the testing for the contrauction of the application.
+** date ** contains the function for the creation of the date when a movements were made in the right format.
