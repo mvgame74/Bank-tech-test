@@ -39,10 +39,9 @@ describe('BankAccount', () => {
     expect(myAccount.bankMovement).toEqual([]);
   });
 
-  it('Date is not null in each transaction and is 10 characters long', function() {
+  it('date is not null in each transaction and is 10 characters long', () => {
     myAccount.deposit(100.00);
     expect(myAccount.bankMovement[0].date.length).toEqual(10);
   });
-
 
 });

@@ -12,19 +12,25 @@ class BankAccount{
   deposit(amount) {
     this.balance += amount;
     this.bankMovement.push({
-      date: createDate(),
+      date: createDate(), 
       credit: amount,
-      debit: null,
-      balance: this.balance });
+      debit: ' ',
+      balance: this.balance});
   }
 
   withdrawal(amount) {
     this.balance -= amount;
     this.bankMovement.push({
       date: createDate(),
-      credit: null,
+      credit: ' ',
       debit: amount,
       balance: this.balance });
   }
-
+  printBankStatement() {
+    console.log('date || credit || debit || balance');
+    for (let i = 0; i < this.bankMovement.length; i++) {
+      console.log(this.bankMovement[i].date + ' || ' + this.bankMovement[i].credit + ' || ' + this.bankMovement[i].debit + ' || ' + this.bankMovement[i].balance);
+    }
+    
+  }
 }

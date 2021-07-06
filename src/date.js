@@ -15,14 +15,3 @@ function createDate() {
   today = dd + '/' + mm + '/' + yyyy;
   return(today);
 }
-
-  // p day;
-  // p month;
-
-  // if day.length < 2; day = '0'+ day;
-  // if month.length < 2; month = '0'+ day;
-
-  // today = day + '/' + month + '/' + year;
-
-  // return today;
-
