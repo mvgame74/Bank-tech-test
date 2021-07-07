@@ -98,7 +98,13 @@ I need to see a printed bank statement.
 ```
 ## Aproach
 
-I stated by writing the simplest test I could think of, first to create a bank account withzero balance, and then building up to make deposits and make withdrawals; after this, I started building up the bank movements, by creating the line with each action and pushing it into an array. This then progressed to be able to add a date to it, and modify the movement format. Finally, construccted the format for an output in console.log to be able to see all the movements together in a statement.
+I stated by writing the simplest test I could think of:
+
+1.- create a bank account with zero balance
+2.- adding up to make deposits and make withdrawals
+3.- started building up the bank movements, by creating the line with each action (deposit or withdrawal) and pushing it into an array
+4.- progressed to be able to add a date to it, and modify the movement format
+5.- construccted the format for an output in console.log to be able to see all the movements together in a statement
 
 ## Structure
 
