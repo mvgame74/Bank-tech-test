@@ -10,22 +10,31 @@ class BankAccount {
 
   deposit (amount) {
     this.balance += amount
-    this.bankMovement.push({
-      date: createDate(),
-      credit: amount,
-      debit: '',
-      balance: this.balance
-    })
+    this.createBankMovement('credit', amount, this.balance)
   }
 
   withdrawal (amount) {
     this.balance -= amount
+    this.createBankMovement('debit', amount, this.balance)
+  }
+
+  createBankMovement(typeMovement, amount, balance) {
+    let midValue = ''
+    if (typeMovement === 'credit') {
+      midValue = 'credit: ' + amount + ', debit: '
+    }
+
+    else {
+      midValue = 'credit: , debit: ' + amount
+    }
+    console.log(midValue)
+
     this.bankMovement.push({
       date: createDate(),
-      credit: '',
-      debit: amount,
-      balance: this.balance
+      midValue,
+      balance: balance
     })
+    console.log(this.bankMovement)
   }
 
   printBankStatement () {
