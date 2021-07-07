@@ -44,4 +44,10 @@ describe('BankAccount', () => {
     expect(myAccount.bankMovement[0].date.length).toEqual(10)
   })
 
+  it('calls the printing statement method', () => {
+    myAccount.deposit(100.00)
+    let spy = spyOn(myAccount, 'printBankStatement')
+    myAccount.printBankStatement()
+    expect(spy).toHaveBeenCalled()
+  })
 })
