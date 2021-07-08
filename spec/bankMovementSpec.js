@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 describe('BankMovement', () => {
   let myAccount
@@ -24,12 +24,5 @@ describe('BankMovement', () => {
   it('date is not null in each transaction and is 10 characters long', () => {
     myAccount.deposit(100.00)
     expect(myAccount.bankMovements[0].date.length).toEqual(10)
-  })
-
-  it('calls the printing statement method', () => {
-    myAccount.deposit(100.00)
-    let spy = spyOn(myAccount, 'printBankStatement')
-    myAccount.printBankStatement()
-    expect(spy).toHaveBeenCalled()
   })
 })

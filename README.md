@@ -53,7 +53,7 @@ Follow these instructions to run the program:
 > myAccount.balance;
 <= 1000
 ````
-3. Withdraw £5
+3. Withdraw £500
 ````
 > myAccount.withdraw(500);
 <= undefined
@@ -108,6 +108,9 @@ I stated by writing the simplest test I could think of:
 3. started building up the bank movements, by creating the line with each action (deposit or withdrawal) and pushing it into an array
 4. progressed to be able to add a date to it, and modify the movement format
 5. construccted the format for an output in console.log to be able to see all the movements together in a statement
+6. separated the function for the creation of bank movements into its own file
+7. separated the function of printing the bank statement into its own files
+* (with steps 6 and 7, the separation of responsability is achieved)
 
 ## Structure & responsabilities
 
@@ -116,5 +119,6 @@ The structureis divided in three main files:
 * **bank.js** contains the initialisation of the bank account, and the methods for deposits, withdrawals. 
 * **bankSpec.js** contains the testing for the construction of the application.
 * **bankmovement** records the information for each bank movement done.
+* **bankmovementSpec** moved here the testing regarding the bank movement.
 * **bankstatement** can print all the information.
 * **date** contains the function for the creation of the date when a movements were made in the right format.
