@@ -114,7 +114,7 @@ I stated by writing the simplest test I could think of:
 
 ## Structure & responsabilities
 
-The structureis divided in three main files:
+The structureis divided in six main files:
 
 * **bank.js** contains the initialisation of the bank account, and the methods for deposits, withdrawals. 
 * **bankSpec.js** contains the testing for the construction of the application.
