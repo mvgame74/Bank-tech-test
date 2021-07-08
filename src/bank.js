@@ -1,7 +1,7 @@
 class BankAccount {
   constructor(balance) {
     this.balance = 0.00
-    this.bankMovement = []
+    this.bankMovements = []
   }
 
   getCurrentBalance () {
@@ -19,28 +19,30 @@ class BankAccount {
   }
 
   createBankMovement(typeMovement, amount, balance) {
-    let midValue = ''
     if (typeMovement === 'credit') {
-      midValue = 'credit: ' + amount + ', debit: '
+      this.bankMovements.push({
+        date: createDate(),
+        credit: amount,
+        debit: '',
+        balance: balance
+      })
+    } else {
+      this.bankMovements.push({
+        date: createDate(),
+        credit: '',
+        debit: amount,
+        balance: balance
+      })
     }
-
-    else {
-      midValue = 'credit: , debit: ' + amount
-    }
-    console.log(midValue)
-
-    this.bankMovement.push({
-      date: createDate(),
-      midValue,
-      balance: balance
-    })
-    console.log(this.bankMovement)
   }
 
   printBankStatement () {
     console.log('date || credit || debit || balance')
-    for (let i = 0; i < this.bankMovement.length; i++) {
-      console.log(this.bankMovement[i].date + ' || ' + this.bankMovement[i].credit + ' || ' + this.bankMovement[i].debit + ' || ' + this.bankMovement[i].balance)
+    for (let i = 0; i < this.bankMovements.length; i++) {
+      console.log(this.bankMovements[i].date + ' || ' +
+                  this.bankMovements[i].credit + ' || ' +
+                  this.bankMovements[i].debit + ' || ' +
+                  this.bankMovements[i].balance)
     }
   }
 }
