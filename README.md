@@ -73,8 +73,8 @@ Follow these instructions to run the program:
 <= undefined
 ````
 
-
-![Here is the example in console.log](./images/bank-test.png)
+## Console.log screenshot
+![Here is the example](./images/bank-test.png)
 
 ## User stories
 ```
@@ -99,7 +99,7 @@ So I can check what my bank has recorded my movements correctlt,
 I need to see a printed bank statement.
 
 ```
-## Aproach
+## Approach
 
 I stated by writing the simplest test I could think of:
 
@@ -109,10 +109,11 @@ I stated by writing the simplest test I could think of:
 4. progressed to be able to add a date to it, and modify the movement format
 5. construccted the format for an output in console.log to be able to see all the movements together in a statement
 
-## Structure
+## Structure & responsabilities
 
 The structureis divided in three main files:
 
-**bank.js** contains the initialisation of the bank account, and the methods for deposits, withdrawals and printing bank statements. 
-**bankSpec.js** contains the testing for the contrauction of the application.
-**date** contains the function for the creation of the date when a movements were made in the right format.
+* **bank.js** contains the initialisation of the bank account, and the methods for deposits, withdrawals. 
+* **bankSpec.js** contains the testing for the construction of the application.
+* **bankstatement** records the information for esch bank movement done, and can print the information.
+* **date** contains the function for the creation of the date when a movements were made in the right format.
