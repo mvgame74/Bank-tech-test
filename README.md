@@ -115,5 +115,6 @@ The structureis divided in three main files:
 
 * **bank.js** contains the initialisation of the bank account, and the methods for deposits, withdrawals. 
 * **bankSpec.js** contains the testing for the construction of the application.
-* **bankstatement** records the information for esch bank movement done, and can print the information.
+* **bankmovement** records the information for each bank movement done.
+* **bankstatement** can print all the information.
 * **date** contains the function for the creation of the date when a movements were made in the right format.
